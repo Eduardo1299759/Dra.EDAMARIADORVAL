@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16968147480"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16968147480');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16968147480"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16968147480');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dra. Eda Maria Meneghini - Harmonização Facial em Taubaté</title>
     <meta name="description" content="Clínica de estética facial especializada em harmonização facial, toxina botulínica, preenchimentos e tratamentos avançados em Taubaté-SP">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <style>
         * {
             margin: 0;
@@ -132,6 +137,7 @@
             animation: slideUp 1s ease-out 0.6s both;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .cta-button::before {
@@ -329,6 +335,8 @@
             z-index: 1000;
             animation: pulse 2s infinite;
             transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
         }
 
         .floating-whatsapp:hover {
@@ -357,6 +365,22 @@
         .contact-info p {
             margin: 8px 0;
             font-size: 1.1rem;
+        }
+
+        /* Loading optimization */
+        .hero-content {
+            will-change: transform, opacity;
+        }
+
+        .service-card {
+            will-change: transform;
+        }
+
+        /* Accessibility improvements */
+        .cta-button:focus,
+        .floating-whatsapp:focus {
+            outline: 3px solid rgba(255, 255, 255, 0.6);
+            outline-offset: 2px;
         }
 
         @media (max-width: 768px) {
@@ -394,15 +418,43 @@
             .about-image {
                 height: 200px;
             }
+
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .doctor-name {
+                font-size: 1.6rem;
+            }
+
+            .services {
+                padding: 80px 0;
+            }
+
+            .about {
+                padding: 80px 0;
+            }
+
+            .cta-section {
+                padding: 80px 0;
+            }
         }
     </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBM5GK66"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -410,8 +462,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h1>Harmonização Facial</h1>
                 <p>Especialista em tratamentos estéticos faciais avançados para realçar sua beleza natural</p>
                 <div class="location">📍 Taubaté - SP</div>
-                <a href="#" class="cta-button" id="mainCTA">
-                    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                <a href="#" class="cta-button" id="mainCTA" role="button" aria-label="Agendar consulta via WhatsApp">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.506"/>
                     </svg>
                     Agendar Consulta
@@ -427,61 +479,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🦷</div>
+                    <div class="service-icon" aria-hidden="true">🦷</div>
                     <h3>Odontologia</h3>
                     <p>Tratamentos odontológicos completos com foco na saúde e estética do seu sorriso.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🦷</div>
+                    <div class="service-icon" aria-hidden="true">🦷</div>
                     <h3>Endodontia</h3>
                     <p>Especialista em tratamento de canal, preservando seus dentes naturais com técnicas avançadas.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">✨</div>
+                    <div class="service-icon" aria-hidden="true">✨</div>
                     <h3>Harmonização Facial</h3>
                     <p>Procedimentos para equilibrar e harmonizar os traços faciais, respeitando sua individualidade.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">💆</div>
+                    <div class="service-icon" aria-hidden="true">💆</div>
                     <h3>Toxina Botulínica</h3>
                     <p>Tratamento para rugas e linhas de expressão, proporcionando um aspecto mais jovem e natural.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">💋</div>
+                    <div class="service-icon" aria-hidden="true">💋</div>
                     <h3>Preenchimento Labial</h3>
                     <p>Realce dos lábios com técnicas seguras para um resultado natural e harmonioso.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🌟</div>
+                    <div class="service-icon" aria-hidden="true">🌟</div>
                     <h3>Preenchimento Facial</h3>
                     <p>Restauração de volume e contorno facial para um aspecto mais jovem e definido.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🔬</div>
+                    <div class="service-icon" aria-hidden="true">🔬</div>
                     <h3>Microagulhamento</h3>
                     <p>Estímulo natural do colágeno para melhoria da textura e qualidade da pele.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">💧</div>
+                    <div class="service-icon" aria-hidden="true">💧</div>
                     <h3>Skinbooster</h3>
                     <p>Hidratação profunda da pele para um aspecto mais luminoso e saudável.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">⬆️</div>
+                    <div class="service-icon" aria-hidden="true">⬆️</div>
                     <h3>Lifting Facial</h3>
                     <p>Rejuvenescimento facial não cirúrgico para lifting e firmeza da pele.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">⚡</div>
+                    <div class="service-icon" aria-hidden="true">⚡</div>
                     <h3>Bioestimuladores de Colágeno</h3>
                     <p>Estímulo da produção natural de colágeno para rejuvenescimento duradouro.</p>
                 </div>
@@ -498,7 +550,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p>Nossa clínica em Taubaté está equipada com tecnologia de ponta e segue os mais altos padrões de segurança e qualidade, garantindo resultados naturais e duradouros.</p>
                     <p>Cada procedimento é realizado com técnica apurada e cuidado especial para proporcionar a melhor experiência possível.</p>
                 </div>
-                <div class="about-image">
+                <div class="about-image" aria-label="Ícone representando profissional de saúde">
                     👩‍⚕️
                 </div>
             </div>
@@ -509,8 +561,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container">
             <h2>Transforme Sua Beleza</h2>
             <p>Agende sua consulta e descubra como podemos realçar sua beleza natural com segurança e resultados excepcionais.</p>
-            <a href="#" class="cta-button" id="secondaryCTA">
-                <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <a href="#" class="cta-button" id="secondaryCTA" role="button" aria-label="Entrar em contato via WhatsApp">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.506"/>
                 </svg>
                 Fale Conosco
@@ -518,8 +570,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <a href="#" class="floating-whatsapp" id="floatingWhatsApp">
-        <svg class="whatsapp-icon" viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: white;">
+    <a href="#" class="floating-whatsapp" id="floatingWhatsApp" role="button" aria-label="Contato rápido via WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: white;" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.506"/>
         </svg>
     </a>
@@ -533,40 +585,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <script>
-        // WhatsApp contact functionality
+        // Performance optimization - Debounce function
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // WhatsApp contact functionality with error handling
         const whatsappButtons = document.querySelectorAll('#mainCTA, #secondaryCTA, #floatingWhatsApp');
         
         whatsappButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
-                const message = encodeURIComponent('Olá! Gostaria de agendar uma consulta para harmonização facial.');
-                const whatsappUrl = `https://wa.me/5512999999999?text=${message}`;
-                window.open(whatsappUrl, '_blank');
-            });
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to floating button
-        window.addEventListener('scroll', function() {
-            const floatingButton = document.getElementById('floatingWhatsApp');
-            if (window.scrollY > 100) {
-                floatingButton.style.opacity = '1';
-            } else {
-                floatingButton.style.opacity = '0.8';
-            }
-        });
-    </script>
-</body>
-</html>
+                try {
+                    const message = encodeURIComponent('Olá! Gostaria de agendar uma consulta para harmonização facial.');
+                    // IMPORTANTE: Substitua 5512999999999 pelo número real do WhatsApp
+                    const whatsappUrl = `https://wa.me/5512999999999?text=${message}`;
+                    
+                    // Track button click for analytics
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'click', {
+                            event_category:
